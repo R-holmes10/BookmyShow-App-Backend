@@ -1,6 +1,6 @@
 const mongodb = require("mongodb");
 
-const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
+// const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -22,6 +22,4 @@ let user_connection = mongoose.model("User", UserSchema);
 exports.connection = collection_connection;
 exports.Userconnection = user_connection;
 
-//2jldcFIugVIXUpZe
-//RT-Sherlockholmes
-//mongodb+srv://<username>:<password>@cluster0.mgtnz8t.mongodb.net/?retryWrites=true&w=majority
+
