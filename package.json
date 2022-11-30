@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "18.12.1"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
@@ -22,6 +25,7 @@
     "express-validator": "^6.14.2",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.11.0",
-    "mongoose": "^6.7.2"
+    "mongoose": "^6.7.2",
+    "vercel": "^28.6.0"
   }
 }
