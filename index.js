@@ -10,11 +10,12 @@ const TicketBooking = require("./routes/TicketBooking");
 const cors = require("cors");
 const userRouter = require("./routes/userRoutes");
 app.use(cors());
-
-app.use("/", TicketBooking);
-
-app.use("/users", userRouter);
 app.use(express.json());
+
+// ROUTES
+app.use("/api/booking", TicketBooking);
+app.use("/users", userRouter);
+
 app.listen(port, () =>
   console.log(
     `BookMyShow App backend listening on port http://localhost:${port}`
