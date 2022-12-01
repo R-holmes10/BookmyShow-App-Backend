@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 require("dotenv").config();
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 const path = require("path");
 app.use(express.static(path.join(__dirname + "/public")));
 app.use(bodyParser.urlencoded({ extended: false }));
