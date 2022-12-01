@@ -7,7 +7,6 @@ const path = require("path");
 app.use(express.static(path.join(__dirname + "/public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-const { connection } = require("./db/connector");
 const TicketBooking = require("./routes/TicketBooking");
 const cors = require("cors");
 const userRouter = require("./routes/userRoutes");
@@ -19,10 +18,10 @@ app.use(express.json());
 app.use("/api/booking", TicketBooking);
 app.use("/users", userRouter);
 
-connection(()=> app.listen(port, () =>
+ app.listen(port, () =>
   console.log(
     `BookMyShow App backend listening on port http://localhost:${port}`
-  ))
-);
+  ));
+
 
 module.exports = app;
