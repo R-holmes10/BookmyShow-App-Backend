@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 const port = 8080;
 const path = require("path");
+app.use(express.static(path.join(__dirname + "/public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const { connection } = require("./db/connector");
