@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.27355fd6.css",
-    "main.js": "/static/js/main.6040689f.js",
+    "main.css": "/static/css/main.85760855.css",
+    "main.js": "/static/js/main.127a50e0.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/BMSlogo.png": "/static/media/BMSlogo.aaa08c15eff5de4e4194.png",
     "index.html": "/index.html",
-    "main.27355fd6.css.map": "/static/css/main.27355fd6.css.map",
-    "main.6040689f.js.map": "/static/js/main.6040689f.js.map",
+    "main.85760855.css.map": "/static/css/main.85760855.css.map",
+    "main.127a50e0.js.map": "/static/js/main.127a50e0.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.27355fd6.css",
-    "static/js/main.6040689f.js"
+    "static/css/main.85760855.css",
+    "static/js/main.127a50e0.js"
   ]
 }
