@@ -165,7 +165,7 @@ const MovieDetails = () => {
     <div className="bg-gray-100 pb-6">
       <div>
         {/* Header */}
-        <h1 className="text-3xl font-bold py-6 px-4">Book that Show!</h1>
+        <h1 className="text-3xl font-bold py-6 px-12">Book that Show!</h1>
         <div className="flex justify-center bg-white p-6 mx-4 rounded-md drop-shadow-md">
           <div>
             {/* Movie-Name */}

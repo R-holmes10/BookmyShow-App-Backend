@@ -53,7 +53,7 @@ function SeatButton({ item, index, handleSeatSlot,ToggleSeats }) {
         </button>
 
         {/* Display Number of seats */}
-        <span className="px-6 w-0">{item.seats}</span>
+        <button className="px-6 w-0">{item.seats}</button>
 
         {/* Increment button */}
         <button
