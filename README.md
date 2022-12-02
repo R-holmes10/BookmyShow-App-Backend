@@ -37,33 +37,30 @@ Install dependencies (if you are using yarn then do with that)
 npm install
 ```
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
   <h2>Project Description</h2>
   <b>Project Name : BookMyShow </b>
   <a href ="https://bookmyshow-project-frontend.vercel.app"/>
   Live Here
+  <br></br>
   </a>
+  <b>Backend Deployment:</b>
+  <a href=""/>
+  Live here
+  </a>
+  
   <br>
-  <b>API Documentation </b>
-  <a href ="https://documenter.getpostman.com/view/21949842/2s8YmSs1K2#503fe0a9-50d5-4f27-8feb-0dcda0e15345"/>
-  Click Here
-  </a>
+ 
   <br>
  </br>
 
 <b>Languages and Tools used: </b>
 
  <div>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/redux/redux-original.svg" title="Redux" alt="Redux " width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" title="TailwindCSS" alt="JavaScript" width="40" height="40"/>&nbsp;
   <img src="https://axios-http.com/assets/logo.svg" title="Axios" alt="JavaScript" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original.svg" title="MongoDB" alt="MongoDB" width="40" height="40"/>&nbsp;
   <img src="https://avatars.githubusercontent.com/u/10251060?s=200&v=4" title="Postman" alt="Postman" width="40" height="40"/>&nbsp;
@@ -78,46 +75,421 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
   <p>➤ Saad Ansari </p> 
   <p>➤ Md. Ashif Reza</p>
   <p>➤ Kaustubh Sule</p>
-  <p>➤ Parvez Ahmed Ansari</p><br>
+ <br>
 
-<b>Project Components:</b><br>
+ # API Documentation
+ 
+ This API Documentation deals with the specifications of endpoints used in the full-stack project named the 'Book that Show' App. It has SIGN UP and SIGN IN API to deal with user authentication. When new users are successfully signed up, they will receive a token which needs to be entered under the Headers section of Postman, whereas the key: auth-key and value: token, to Sign-in. After successfully signing in, the user will be re-directed to Tickets Booking page. It has 2 methods for Movie Ticket Booking: GET and POST. The GET method will fetch the Last Booking details from the database associated with the user and display them under their respective section. The POST method will allow users to book movie tickets and store data in the database. An in-depth understanding of the usage of API endpoints is mentioned below.
 
-<!-- Main UI -->
 
-<b>➤ Main UI :</b> This window represents the main user interface of our web application.
-<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/final-ui.jpeg" width="1200" height="500"/><br></br>
 
-<!-- Select Movie Slot -->
+## SignUp
 
-<b>➤ Movie name selection :</b> This component allows the user to select a movie of choice.
-<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/select-movie.jpeg" width="1200" height="150"/><br></br>
+Used to provide token to newly registered users.  
+**URL** : `http://localhost:8080/users/signup`  
+**Method** : `POST`  
+**Auth required** : NO  
+**Data constraints**
 
-<!-- Select Time Slot -->
+``` json
+{
+    "username": "[valid username]",
+    "email"   : "[valid email id]", 
+    "password": "[password of minimum 5 and maximum 10 characters]"
+}
 
-<br><b>➤ Time slot selection:</b> This component displays all the available time slots throughout the day. The user can select according to preference.
-<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/select-time.jpg" width="1200" height="150"/><br></br>
+```
 
-<!-- Select Seat Type & Quantity -->
+**Data example**
 
-<br><b>➤ Seat Type & Quantity :</b> This component enables user to select a specific seat type and the quantity of seats required. The maximum amount available per user is limited to 10 seats.
-<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/select-seat.jpeg" width="1200" height="150"/><br></br>
+``` json
+{
+     "username": "AlmaBetter",
+    "email"   : "almabetter123@gmail.com", 
+    "password": "ab123"
+}
 
-<!-- Book Now Button -->
+```
 
-<br><b>➤ Book Now button:</b> This button confirms the user's choices and displays a message to the user that his/her seats have been successfully booked.
-<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/book-now.jpg" width="150" height="70"/><br></br>
+### Success Response
 
-<!-- Last Booking Details -->
+**Code** : `201 OK`
 
-<br><b>➤ Last Booking Details:</b> If the user is a returning customer and has previously booked for a movie, this component will display his/her last booking details.  
-<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/last-booking-details.jpeg" width="400" height="400"/><br></br>
+**Content example**
 
-<!-- New User Sign-up -->
+``` json
+{
+    "success": true,
+    "token": 
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2Mzg1ZTA5NjRmMzBmMjMyNjc5MjkwYjgiLCJpYXQiOjE2Njk3MTgxNjZ9.zCrpcwDRmVVENOL5UgY6WQdQeRILd4u3aY6n8kR1B9k"
+}
 
-<br><b>➤ Sign-up:</b> This component allows new users to sign-up with a username, email and a password. The password is encrypted using the bcrypt library. If an existing user tries to sign-up, a message is displayed to the user for the same.
-<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/sign-up.png" width="1000" height="450"/><br></br>
+```
 
-<!-- Existing User Login -->
+### Error Response
 
-<br><b>➤ User Login:</b> Here, an existing user can log-in using his/her login credentials. And, their previous booking details are also displayed on the component 'Last Booking Details'.  
-<br></br><img src="https://github.com/sulekaustubh/BookMyShow-screenshots/blob/main/sign-in.png" width="1000" height="450"/><br></br>
+**Condition** : If 'user with an email' already exists.
+
+**Code** : `403 Forbidden`
+
+**Content** :
+
+``` json
+{
+    "success": false,
+    "message": "Sorry a user with this email already exists"
+}
+
+```
+
+**Code** :`500`
+
+**Content** :
+
+``` json
+{
+    "errors": [
+        "Something went wrong"
+    ]
+}
+
+```
+
+
+## SignIn
+
+Get the details of the currently Authenticated User.  
+.  
+**URL** : [**http://localhost:8080/users/signin**](http://localhost:8080/users/signin)
+
+**Method** : `POST`
+
+**Auth required** : `NO`
+
+**Data constraints**
+
+``` json
+{
+    "email"   : "[valid email id]", 
+    "password": "[password ]"
+}
+
+```
+
+**Data example**
+
+``` json
+{
+    "email"   : "almabetter123@gmail.com", 
+    "password": "ab123"
+}
+
+```
+
+### Success Response
+
+**Code** : `201 OK`
+
+**Content example**
+
+``` json
+{
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2Mzg1ZTA5NjRmMzBmMjMyNjc5MjkwYjgiLCJpYXQiOjE2Njk3MTg1OTR9.hiyB2hwf7pULT3a23o_ZV_KTOdlbSdh4F8neBfleybk"
+}
+
+```
+
+### Error Response
+
+**Code** : `404 BAD REQUEST`
+
+**Condition** : **If 'user with entered email' not found**
+
+**Content** :
+
+``` json
+{
+    "success": false,
+    "message": "User not found"
+}
+
+```
+
+**Condition** : **If 'user' enters wrong password**
+
+**Content** :
+
+``` json
+{
+    "success": false,
+    "message": "Invalid Credentials"
+}
+
+```
+
+**Code** :`500`
+
+**Content** :
+
+``` json
+{
+    "error": [
+        "Internal Server Error"
+    ]
+}
+
+```
+
+
+
+
+## GET
+
+The GET method is a HTTP method that is applied while requesting information from a particular source. It is also used to get a specific variable derived from a group.
+
+**API to get information of available tickets at a given position**
+
+**Request method**: `GET`
+
+**Request URI**: `http://localhost:8080/api/booking`
+
+**Auth required** : YES
+
+**Data constraints**
+
+``` json
+{
+    "movie": "[choose a movie name]",
+    "slot": "[choose a time-slot]",
+    "seats":{
+       "A1":"[Number of seats]",
+       "A2":"[Number of seats]",
+       "A3":"[Number of seats]",
+       "A4":"[Number of seats]",
+       "D1":"[Number of seats]",
+       "D2":"[Number of seats]"  
+} 
+}
+
+```
+
+**Data example**
+
+``` json
+{
+    "movie": "Tenet",
+    "slot" : "8:00 AM",
+    "seats":{
+       "A1":10,
+       "A2":2  
+} 
+}
+
+```
+
+### Success Response
+
+**Code** : `200 OK`
+
+**Content example**
+
+``` json
+[
+    {
+        "seats": {
+            "A1": 10,
+            "A2": 2
+        },
+        "_id": "6385dab44f30f232679290b4",
+        "user": "63851043d6018785f2d3ad45",
+        "movie": "Tenet",
+        "slot": "8:00 AM",
+        "__v": 0
+    }
+]
+
+```
+
+### Error Response
+
+**Code** : `401 Unauthorized`
+
+**Content example**
+
+``` json
+{
+    "error": "Please authenticate using a valid token"
+}
+
+```
+
+**Code** : `500 BAD REQUEST`
+
+**Content example**
+
+``` json
+{
+"error": "Internal server error"
+}
+
+```
+
+
+
+## POST
+
+POST is an HTTP method designed to send data to the server from an HTTP client. It requests the web server accept the data enclosed in the body of the POST message.
+
+**API to book movie tickets at a given position**
+
+**Request method**: `POST`
+
+**Request URI**: [**http://localhost:8080/api/booking**](http://localhost:8080/api/booking)
+
+**Auth required** : `YES`
+
+**Data constraints**
+
+``` json
+{
+    "movie": "[choose a movie name]",
+    "slot": "[choose a time-slot]",
+    "seats":{
+       "A1":"[Number of seats]",
+       "A2":"[Number of seats]",
+       "A3":"[Number of seats]",
+       "A4":"[Number of seats]",
+       "D1":"[Number of seats]",
+       "D2":"[Number of seats]"  
+} 
+}
+
+```
+
+**Data example**
+
+``` json
+{
+   "movie": "Tenet",
+    "slot": "8:00 AM",
+    "seats": {
+        "A1": 10,
+        "A2": 2
+    }
+}
+
+```
+
+### Success Response
+
+**Code** : `200 OK`
+
+**Content example**
+
+``` json
+{
+    "user": "63851043d6018785f2d3ad45",
+    "movie": "Tenet",
+    "slot": "8:00 AM",
+    "seats": {
+        "A1": 10,
+        "A2": 2
+    },
+    "_id": "6385dab44f30f232679290b4",
+    "__v": 0
+}
+
+```
+
+### Error Response
+
+**Code** :`401 Unauthorized`
+
+**Condition** :**If user authorization is missing**
+
+**Content example**
+
+``` json
+{
+    "error": "Please authenticate using a valid token"
+}
+
+```
+
+**Code** : `400 BAD REQUEST`
+
+**Condition** : **If movie name is missing**
+
+**Content example**
+
+``` json
+{
+    "errors": [
+        {
+            "value": "",
+            "msg": "Movie name is required",
+            "param": "movie",
+            "location": "body"
+        }
+    ]
+}
+
+```
+
+**Condition** : **If time-slot is missing**
+
+**Content example**
+
+``` json
+{
+    "errors": [
+        {
+            "value": "",
+            "msg": "time is required",
+            "param": "slot",
+            "location": "body"
+        }
+    ]
+}
+
+```
+
+**Condition** : **If seat-slot is missing**
+
+**Content example**
+
+``` json
+{
+    "errors": [
+        {
+            "value": "",
+            "msg": "seat is required",
+            "param": "seats",
+            "location": "body"
+        }
+    ]
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
