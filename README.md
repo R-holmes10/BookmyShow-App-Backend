@@ -3,7 +3,7 @@
 </div>
 <div align="center">
 <h2>Hello ! <h2>
-  <p>Ritu Verma here !</p> 
+  <p><i>Ritu Verma</i> here !</p> 
 </div>
 
 <!-- Links to social profiles  -->
@@ -43,24 +43,22 @@ Runs the app in the development mode.\
 Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
   <h2>Project Description</h2>
-  <b>Project Name : BookMyShow </b>
+  <b>Project Name : <i>BookMyShow</i> </b>
   <a href ="https://bookmyshow-project-frontend.vercel.app"/>
   Live Here
-  
   </a>
+  </br>
   <b>Backend Deployment:</b>
   <a href="https://bookmyshow-project-backend.vercel.app"/>
   Live here
   </a>
-
+  
   <b>Postman API Documentation:</b>
   <a href="https://documenter.getpostman.com/view/21949842/2s8YmSs1K2"/>
   Live here
   </a>
   
-  <br>
- 
-  <br>
+
  </br>
 
 <b>Languages and Tools used: </b>
@@ -74,10 +72,10 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
 <b>Team Collaborators: </b>
 
-  <p>➤ Ritu Verma</p>
-  <p>➤ Saad Ansari </p> 
-  <p>➤ Md. Ashif Reza</p>
-  <p>➤ Kaustubh Sule</p>
+  <p>➤ <i>Ritu Verma</i></p>
+  <p>➤ <i>Saad Ansari</i> </p> 
+  <p>➤ <i>Md. Ashif Reza</i></p>
+  <p>➤ <i>Kaustubh Sule</i></p>
  <br>
 
  # API Documentation
