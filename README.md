@@ -46,10 +46,15 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
   <b>Project Name : BookMyShow </b>
   <a href ="https://bookmyshow-project-frontend.vercel.app"/>
   Live Here
-  <br></br>
+  
   </a>
   <b>Backend Deployment:</b>
   <a href="https://bookmyshow-project-backend.vercel.app"/>
+  Live here
+  </a>
+
+  <b>Postman API Documentation:</b>
+  <a href="https://documenter.getpostman.com/view/21949842/2s8YmSs1K2"/>
   Live here
   </a>
   
