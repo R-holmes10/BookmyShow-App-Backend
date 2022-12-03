@@ -94,7 +94,7 @@ Used to provide token to newly registered users.
 
 ``` json
 {
-    "username": "[valid username]",
+    "username": "[valid username of minimum 3 characters]",
     "email"   : "[valid email id]", 
     "password": "[password of minimum 5 and maximum 10 characters]"
 }
@@ -284,7 +284,7 @@ The GET method is a HTTP method that is applied while requesting information fro
     "movie": "Tenet",
     "slot" : "8:00 AM",
     "seats":{
-       "A1":10,
+       "A1":9,
        "A2":2  
 } 
 }
@@ -301,7 +301,7 @@ The GET method is a HTTP method that is applied while requesting information fro
 [
     {
         "seats": {
-            "A1": 10,
+            "A1": 9,
             "A2": 2
         },
         "_id": "6385dab44f30f232679290b4",
@@ -377,7 +377,7 @@ POST is an HTTP method designed to send data to the server from an HTTP client. 
    "movie": "Tenet",
     "slot": "8:00 AM",
     "seats": {
-        "A1": 10,
+        "A1": 9,
         "A2": 2
     }
 }
@@ -396,7 +396,7 @@ POST is an HTTP method designed to send data to the server from an HTTP client. 
     "movie": "Tenet",
     "slot": "8:00 AM",
     "seats": {
-        "A1": 10,
+        "A1": 9,
         "A2": 2
     },
     "_id": "6385dab44f30f232679290b4",
