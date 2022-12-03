@@ -11,7 +11,7 @@
   <a href="https://www.linkedin.com/in/ritu-verma-52a105228/ ">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
-  <a href="#">
+  <a href="https://youtu.be/JkI1acKmYl0">
     <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
   </a>
   <a href="#">
@@ -217,6 +217,8 @@ Get the details of the currently Authenticated User.
 
 ```
 
+**Code** : `400 BAD REQUEST`
+
 **Condition** : **If 'user' enters wrong password**
 
 **Content** :
@@ -236,7 +238,7 @@ Get the details of the currently Authenticated User.
 ``` json
 {
     "error": [
-        "Internal Server Error"
+        "Something went wrong"
     ]
 }
 
@@ -470,6 +472,17 @@ POST is an HTTP method designed to send data to the server from an HTTP client. 
             "location": "body"
         }
     ]
+}
+
+```
+
+**Code** : `500`
+
+**Content example**
+
+``` json
+{
+"error": "Internal Server Error"
 }
 
 ```
