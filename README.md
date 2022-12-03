@@ -61,9 +61,8 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
   <a href="https://documenter.getpostman.com/view/21949842/2s8YmSs1K2"/>
   Live here
   </a>
-  
-
-  <br></br>
+ 
+ </br>
 
 ## Languages and Tools used:
 
