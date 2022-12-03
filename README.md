@@ -42,26 +42,30 @@ npm install
 Runs the app in the development mode.\
 Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
-  <h2>Project Description</h2>
+  ## Project Description
   <b>Project Name : <i>BookMyShow</i> </b>
   <a href ="https://bookmyshow-project-frontend.vercel.app"/>
   Live Here
   </a>
-  </br>
+  <br></br>
   <b>Backend Deployment:</b>
   <a href="https://bookmyshow-project-backend.vercel.app"/>
   Live here
   </a>
-  
+  <br></br>
+  <b>Configure Database:</b>
+  Open MongoDB Compass and use Mongo_URI given below
+  (**Mongo_URI**="mongodb+srv://bms:bms123@bookmyshowDB.1bw2pfo.mongodb.net/bookMovie?retryWrites=true&w=majority")
+   <br></br>
   <b>Postman API Documentation:</b>
   <a href="https://documenter.getpostman.com/view/21949842/2s8YmSs1K2"/>
   Live here
   </a>
   
 
- </br>
+  <br></br>
 
-<b>Languages and Tools used: </b>
+## Languages and Tools used:
 
  <div>
 <img src="https://skills.thijs.gg/icons?i=mongodb" title="MongoDB" alt="MongoDB"/>&nbsp;
