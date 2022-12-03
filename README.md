@@ -26,7 +26,7 @@ Clone the repository on your local machine with the command below in your termin
 <!-- Insert repo link below -->
 
 ```bash
-https://
+https://github.com/R-holmes10/BookmyShow-App-Backend.git
 
 cd my-app
 ```
