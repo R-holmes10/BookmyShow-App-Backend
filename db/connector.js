@@ -1,6 +1,4 @@
 const mongodb = require("mongodb");
-
-// const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -8,8 +6,10 @@ let mongoose = require("mongoose");
 const { bookMovieSchema } = require("../models/bookMovie");
 const { UserSchema } = require('../models/user')
 
+const mongoURI="mongodb+srv://bms:bms123@bookmyshowDB.1bw2pfo.mongodb.net/bookMovie?retryWrites=true&w=majority"
+
 mongoose
-  .connect(process.env.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("connection established with mongodb server online");
   })
