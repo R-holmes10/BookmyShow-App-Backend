@@ -56,12 +56,7 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
   <b>Configure Database:</b>
   Open MongoDB Compass and use Mongo_URI given below
   (**Mongo_URI**="mongodb+srv://bms:bms123@bookmyshowDB.1bw2pfo.mongodb.net/bookMovie?retryWrites=true&w=majority")
-   <br></br>
-  <b>Postman API Documentation:</b>
-  <a href="https://documenter.getpostman.com/view/21949842/2s8YmSs1K2"/>
-  Live here
-  </a>
- 
+  
  </br>
 
 ## Languages and Tools used:
